@@ -15,7 +15,7 @@ SPIDER_MODULES = ['realspider.spiders']
 NEWSPIDER_MODULE = 'realspider.spiders'
 
 ITEM_PIPELINES = {
-    'w3school.pipelines.W3SchoolPipeline':300
+    'realspider.pipelines.W3SchoolPipeline':300
 }
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'realspider (+http://www.yourdomain.com)'
@@ -63,9 +63,7 @@ ITEM_PIPELINES = {
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'realspider.pipelines.SomePipeline': 300,
-#}
+
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html

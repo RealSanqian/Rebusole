@@ -2,7 +2,7 @@
 
 from scrapy.spider import Spider
 from scrapy.selector import Selector
-from scrapy import log
+
 
 from realspider.items import W3schoolItem
 
@@ -18,6 +18,7 @@ class W3schoolSpider(Spider):
 
     def parse(self, response):
 
+
         sel = Selector(response)
         sites = sel.xpath('//div[@id="navsecond"]/div[@id="course"]/ul[1]/li')
         items = []
@@ -28,15 +29,10 @@ class W3schoolSpider(Spider):
             title = site.xpath('a/text()').extract()
             link = site.xpath('a/@href').extract()
             desc = site.xpath('a/@title').extract()
-
             item['title'] = [t.encode('utf-8') for t in title]
             item['link'] = [l.encode('utf-8') for l in link]
             item['desc'] = [d.encode('utf-8') for d in desc]
-            items.append(item)
-
-            #记录
-            log.msg("Appending item...",level='INFO')
+         #记录
 
 
-        log.msg("Append done.",level='INFO')
         return items
