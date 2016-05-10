@@ -15,7 +15,7 @@ SPIDER_MODULES = ['realspider.spiders']
 NEWSPIDER_MODULE = 'realspider.spiders'
 
 ITEM_PIPELINES = {
-    'realspider.pipelines.W3SchoolPipeline':300
+    'realspider.pipelines.W3SchoolPipeline':300 ,
 }
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'realspider (+http://www.yourdomain.com)'

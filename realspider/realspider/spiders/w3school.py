@@ -22,7 +22,9 @@ class W3schoolSpider(Spider):
         sel = Selector(response)
         sites = sel.xpath('//div[@id="navsecond"]/div[@id="course"]/ul[1]/li')
         items = []
-
+        filename = response.url.split("/")[-2]
+        with open(filename, 'wb') as f:
+            f.write(response.body)
         for site in sites:
             item = W3schoolItem()
 
@@ -32,7 +34,8 @@ class W3schoolSpider(Spider):
             item['title'] = [t.encode('utf-8') for t in title]
             item['link'] = [l.encode('utf-8') for l in link]
             item['desc'] = [d.encode('utf-8') for d in desc]
-         #记录
+            items.append(item)
+            #记录
 
 
         return items

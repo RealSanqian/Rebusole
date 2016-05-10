@@ -6,10 +6,10 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import json
 import codecs
-
-class RealspiderPipeline(object):
-    def process_item(self, item, spider):
-        return item
+#
+# class RealspiderPipeline(object):
+#     def process_item(self, item, spider):
+#         return item
 
 
 
