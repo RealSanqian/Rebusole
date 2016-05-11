@@ -18,3 +18,7 @@ class W3schoolItem(Item):
     title = Field()
     link = Field()
     desc = Field()
+
+class CSDNBlogItem(Item):
+    article_name = Field()
+    article_url = Field()
