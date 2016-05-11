@@ -22,3 +22,7 @@ class W3schoolItem(Item):
 class CSDNBlogItem(Item):
     article_name = Field()
     article_url = Field()
+
+class CsdnblogcrawlspiderItem(Item):
+        blog_url = Field()
+        blog_name = Field()
