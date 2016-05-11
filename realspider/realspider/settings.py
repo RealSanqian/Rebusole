@@ -14,6 +14,9 @@ BOT_NAME = 'realspider'
 SPIDER_MODULES = ['realspider.spiders']
 NEWSPIDER_MODULE = 'realspider.spiders'
 
+#禁止cookies,防止被ban
+COOKIES_ENABLED = False
+
 ITEM_PIPELINES = {
     'realspider.pipelines.W3SchoolPipeline':300 ,
 }
