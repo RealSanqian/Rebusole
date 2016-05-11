@@ -20,6 +20,13 @@ COOKIES_ENABLED = False
 ITEM_PIPELINES = {
     'realspider.pipelines.W3SchoolPipeline':300 ,
 }
+
+
+#取消默认的useragent,使用新的useragent
+DOWNLOADER_MIDDLEWARES = {
+        'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware' : None,
+        'realspider.rotate_useragent.RotateUserAgentMiddleware' :400
+    }
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'realspider (+http://www.yourdomain.com)'
 
