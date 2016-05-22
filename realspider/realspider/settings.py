@@ -19,6 +19,7 @@ COOKIES_ENABLED = False
 
 ITEM_PIPELINES = {
     'realspider.pipelines.W3SchoolPipeline':300 ,
+    'realspider.pipelines.InsertMysql':300,
 }
 
 
